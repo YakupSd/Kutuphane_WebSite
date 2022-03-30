@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/stil.css" rel="stylesheet" id="bootstrap-css">
+
+
+    <title>Kütüphane Kitap Alım</title>
+
+</head>
+<body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/date.js"></script>
+
+
+
+    <form class="row g-3 needs-validation" novalidate onsubmit="return confirm('Yazarı Eklemek istiyor Musunuz?');">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="author.png" alt="" />
+                    <h3>Yazar Ekle</h3>
+                    <p>Eklemek istediğiniz yazarın bilgilerini girerek bu sayfadan yazar ekleyebilirsiniz!</p>
+                </div>
+                <div class="col-md-9 register-right">
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Eklenecek Yazarın Bilgileri</h3>
+                            <div class="row register-form">
+
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" placeholder="Yazarın Unvanı" value=""  />
+                                    <br />
+
+                                    <input type="text" class="form-control" placeholder="Yazarın Adı *" value="" required />
+                                    <div class="invalid-feedback">
+                                        Lütfen Yazar Adını Girin.
+                                    </div><br />
+
+                                    <input type="text" class="form-control" placeholder="Yazarın Soyadı *" value="" required />
+                                    <div class="invalid-feedback">
+                                        Lütfen Yazarın Soyadını Girin.
+                                    </div>
+
+                                </div>
+                                <button onclick="sweetalertclick()" type="submit" class="btnRegister"> Yazar Ekle</button>
+                            </div>
+
+                                
+                                
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script src="js/validate.js"></script>
+
+</body>
+</html>

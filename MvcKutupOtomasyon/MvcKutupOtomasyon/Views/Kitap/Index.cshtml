@@ -1,0 +1,1053 @@
+﻿@using MvcKutupOtomasyon.Models.Model
+@model List<Kitap>
+@{
+    ViewBag.Title = "Index";
+    Layout = "/Views/Shared/giris_Layout.cshtml";
+}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/style.css" rel="stylesheet" />
+    <title>Deneme Proje Ödevi Kütüphane</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0e4d7;
+        }
+
+        .header {
+            font-size: 16px;
+            background: #000;
+            opacity: 0.9;
+            text-transform: uppercase;
+            -moz-box-shadow: 1px 0px 2px #000;
+            -webkit-box-shadow: 1px 0px 2px #000;
+            box-shadow: 1px 0px 2px #000;
+            text-decoration: none
+        }
+
+            .header a {
+                line-height: 18px;
+                padding: 0 4px;
+                letter-spacing: 1px;
+                text-shadow: 1px 1px 1px #000;
+                color: #ddd;
+            }
+
+                .header a:hover {
+                    color: #fff;
+                }
+
+                .header a span {
+                    font-weight: bold;
+                }
+
+            .header span.right_ab {
+                float: right;
+            }
+
+        .ortalama {
+            margin-top: 20px;
+        }
+
+        .Yazitipi {
+            font-size: 20px;
+            font-family: 'Times New Roman';
+        }
+
+        dropdown-item:active {
+            color: red;
+        }
+
+        .kısım1-1 {
+            background-color: gray;
+            height: auto;
+        }
+
+        .kısım1-2 {
+            background-color: #d6b2d7;
+        }
+
+        .kısım1-3 {
+            background-color: #a08fa1;
+        }
+
+
+        .kısım2-1 {
+            background-color: gray;
+            height: 1000px;
+        }
+
+        .kısım2-2 {
+            background-color: #d6b2d7;
+        }
+
+        .kısım2-3 {
+            background-color: #a08fa1;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Space Mono", monospace;
+            color: #3e474f;
+        }
+
+
+        .wrapper {
+            max-width: 600px;
+            width: 100%;
+            margin: 10vh auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            border: 3px solid #3e474f;
+            user-select: none;
+        }
+
+            label div:first-child {
+                width: 100%;
+                line-height: 45px;
+                margin-left: 10px;
+                font-size: 1.2em;
+            }
+
+        .cross {
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+            .cross:before,
+            .cross:after {
+                content: "";
+                border-top: 2px solid #3e474f;
+                width: 15px;
+                display: block;
+                margin-top: 18px;
+                transition: 0.3s;
+            }
+
+            .cross:after {
+                transform: rotate(90deg);
+                margin-top: -2px;
+            }
+
+        .content {
+            box-sizing: border-box;
+            font-size: 0.9em;
+            margin: 10px 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height, 0.5s;
+        }
+
+        input:checked ~ .content {
+            max-height: 400px;
+            transition: max-height, 1s;
+        }
+
+        input:checked ~ label .cross:before {
+            transform: rotate(180deg);
+        }
+
+        input:checked ~ label .cross:after {
+            transform: rotate(0deg);
+        }
+
+        .questions {
+            margin-top: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height, 0.5s;
+        }
+
+            .questions label {
+                border: none;
+                box-shadow: none;
+                margin: 0;
+            }
+
+        input:checked ~ .questions {
+            max-height: 400px;
+            border-bottom: 2px solid #3e474f;
+            transition: 1s;
+        }
+
+        /*----------tool-tip------------*/
+
+        .tip {
+            color: #f03768;
+            cursor: help;
+            position: relative;
+            overflow: visible;
+            font-family: monospace;
+            font-size: 1.3em;
+        }
+
+            .tip:before,
+            .tip:after {
+                position: absolute;
+                opacity: 0;
+                z-index: -100;
+                transform: translateY(-30%);
+                transition: 0.4s;
+            }
+
+            .tip:before {
+                content: "";
+                border-style: solid;
+                border-width: 0.8em 0.5em 0 0.5em;
+                border-color: #3e474f transparent transparent transparent;
+                transform: translateY(-200%);
+                bottom: 90%;
+                left: 50%;
+            }
+
+            .tip:after {
+                content: attr(data-tip);
+                background: #3e474f;
+                color: white;
+                width: 150px;
+                padding: 10px;
+                font-size: 0.8em;
+                bottom: 150%;
+                left: -50%;
+            }
+
+            .tip:hover:before,
+            .tip:hover:after {
+                opacity: 1;
+                z-index: 100;
+                transform: scaleY(1);
+            }
+
+
+
+        //Dropdown Menü
+        .container {
+            overflow: hidden;
+        }
+
+        .filterDiv {
+            float: left;
+            background-color: #2196F3;
+            color: #ffffff;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 2px;
+            display: none; /* Hidden by default */
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn2 {
+            border: none;
+            outline: none;
+            padding: 20px 16px;
+            background-color: #666 /* #f1f1f1*/;
+            cursor: pointer;
+        }
+
+            /* Add a light grey background on mouse-over */
+            .btn2:hover {
+                background-color: #ddd;
+            }
+
+            /* Add a dark background to the active button */
+            .btn2.active {
+                background-color: #666;
+                color: white;
+            }
+
+
+
+        .tab {
+            margin-top: inherit;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #c2a9a9;
+        }
+
+            /* Style the buttons that are used to open the tab content */
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tab button.active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Roman')" id="defaultOpen">Roman</button>
+        <button class="tablinks" onclick="openCity(event, 'BilimKurgu')">BilimKurgu</button>
+        <button class="tablinks" onclick="openCity(event, 'Deneme')">Deneme</button>
+        <button class="tablinks" onclick="openCity(event, 'Dedektif')">Dedektif</button>
+        <button class="tablinks" onclick="openCity(event, 'Şiir')">Şiir</button>
+        <button class="tablinks" onclick="openCity(event, 'Polisiye')">Polisiye</button>
+    </div>
+    <div id="Roman" class="tabcontent">
+        <h3>ROMAN </h3>
+        <section class="Roman ">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-1" name="tabs">
+                            <label for="tab-1"><div>Hayvan Çiftliği - Yazar: George Orwell </div><div class="cross"></div></label>
+                            <div class="content">
+                                Hayvan Çiftliği, George Orwell'in mecazi bir dille yazılmış, fabl tarzındaki siyasi hiciv romanı.
+                                Roman ilk olarak 1945'te Birleşik Krallık'ta yayımlandı.
+                                1996'da ise geçmiş tarihler için verilen Retro Hugo Ödülü'nü 1946 senesi için aldı.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/hayvan.jpg" height="350">
+                </div>
+            </div>
+        </section>
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/şeker.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-2" name="tabs">
+                            <label for="tab-2"><div>Şeker Portakalı - Yazar: José Mauro de Vasconcelos </div><div class="cross"></div></label>
+                            <div class="content">
+                                Şeker Portakalı, Brezilyalı yazar José Mauro De Vasconcelos'un 1968 tarihli romanı.
+                                Brezilya'nın Minas Gerais bölgesinde yaşayan fakir bir ailenin beş yaşındaki oğlu olan hayal gücü çok gelişmiş Zeze adlı çocuğun başından geçenleri konu edinir.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-4">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-3" name="tabs">
+                            <label for="tab-3"><div>Suç ve Ceza - Yazar: Fyodor Dostoyevski </div><div class="cross"></div></label>
+                            <div class="content">
+                                Suç ve Ceza, Rus yazar Fyodor Dostoyevski tarafından yazılan romandır.
+                                İlk olarak 1866 yılı boyunca edebiyat dergisi Rus Habercisi'nde on iki ayda yayımlandı.
+                                Daha sonra tek cilt olarak yayımlandı. Dostoyevski'nin beş yıl süren Sibirya sürgününün dönüşü yazdığı tam uzunluktaki ikinci romanıdır.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/suç.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/körlük.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-4" name="tabs">
+                            <label for="tab-4"><div>Körlük - Yazar: José Saramago  </div><div class="cross"></div></label>
+                            <div class="content">
+                                Körlük, Jose Saramago'nun 1995'te yazdığı Portekizce roman. 1998 Nobel Edebiyat Ödülü sahibi yazarın en ünlü romanlarından birisidir.
+                                Konusu, körlüğün salgın hastalık gibi yayıldığı bir toplumda korku ve paniğin hakim olması sonucu ahlaki değerlerin çökmesidir.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="BilimKurgu" class="tabcontent">
+        <h3>BİLİM KURGU</h3>
+        <section class="Roman mt-4">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-5" name="tabs">
+                            <label for="tab-5"><div>Ben Robot - Yazar: Isaac Asimov  </div><div class="cross"></div></label>
+                            <div class="content">
+                                Ünlü bilimkurgu yazarı Isaac Asimov’un bilimkurguya en büyük katkısı Üç Robot Kanunu’dur. Üç Robot Kanunu’na göre;
+
+                                -Robotlar, insanlara zarar veremez ya da eylemsiz kalarak onlara zarar gelmesine göz yumamaz.
+                                -Robotlar, Birinci Kanun’la çakışmadığı sürece insanlar tarafından verilen emirlere itaat etmek zorundadır.
+                                -Robotlar, Birinci ya da İkinci Kanun’la çakışmadığı sürece kendi varlıklarını korumak zorundadır.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/robot.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/1984.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-6" name="tabs">
+                            <label for="tab-6"><div>1984 - Yazar: George Orwell</div><div class="cross"></div></label>
+                            <div class="content">
+                                Parti’nin dünya görüşü, onu hiç anlayamayan insanlara çok daha kolay dayatılıyordu.
+                                Her şeyi yutuyorlar ve hiçbir zarar görmüyorlardı çünkü tıpkı bir mısır tanesinin bir
+                                kuşun bedeninden sindirilmeden geçip gitmesi gibi, yuttuklarından geriye bir şey kalmıyordu.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-4">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-7" name="tabs">
+                            <label for="tab-7"><div>Cesur Yeni Dünya - Yazar: Aldous Huxley  </div><div class="cross"></div></label>
+                            <div>
+                                Cesur yeni Dünya bizi 'Ford'dan sonra 632 yılına' götürür. Bu dünyanın cesur insanları kapısında "Cemaat, Özdeşlik, İstikrar" yazan Londra Merkez kuluçka ve
+                                Şartlandırma Merkezi'nde üretilirler. Kadınların döllenmesi yasak ve ayıp olduğu için,
+                                'annelik' ve 'babalık' pornografik birer kavram olarak görülür.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/cesur.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/451.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-8" name="tabs">
+                            <label for="tab-8"><div>Fahrenheit 451 - Yazar: Ray Bradbury </div><div class="cross"></div></label>
+                            <div class="content">
+                                “Yazılmış en iyi bilimkurgu romanı. İlk okuduğumda, yarattığı dünyayla kâbuslar görmeme sebep olmuştu.” -Margaret Atwood
+
+                                “Öyle bir eser ki, hakkında ne söylesem eksik kalır.” -Neil Gaiman
+
+                                Hugo En İyi Roman Ödülü
+                                Prometheus Şeref Kürsüsü Ödülü
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-4">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-9" name="tabs">
+                            <label for="tab-9"><div>Zaman Makinesi - Yazar: H. G. Wellsy </div><div class="cross"></div></label>
+                            <div class="content">
+                                Victoria dönemi Londra’sında yaşayan bir bilim insanı zamanda yolculuk yapmak üzere icat ettiği makineyle geleceğin İngiltere’sini ziyaret eder.
+                                Sekiz Yüz İki Bin Yedi Yüz Bir yılında yaşadığı macerayı bir dost meclisinde anlatır.
+                                Geleceğin dünyası ayrıcalıklı insanların; güzel, narin ve tembel Eloi’ların rahat ve kaygısız bir yaşam sürdükleri bir yerdir.
+                                Ancak Zaman Gezgini bu macera sırasında çok geçmeden yeraltı dünyasına ait hortlaksı Morlock’ları da keşfetmiştir. Wells, Victoria dönemi İngiltere’sinde varsıllarla
+                                yoksullar arasında giderek büyüyen uçuruma yönelik keskin eleştirisinde, tarihin ve gelişmenin anlamını sorgular.
+                                Toplumsal adaletsizliğin sürüp gitmesi halinde yol açabileceği felaketlere dair uyarıda bulunur. 1895’te yayımlanan Zaman Makinesi,
+                                bilimkurgu edebiyatının köşe taşlarından biri olarak, kuşaklar boyu yazarları etkiledi.
+                                21. yüzyılda yaklaşan çevre felaketlerine ve gezegenimizin yazgısına ilişkin kaygılara dair bir öngörü barındıran eskatolojik boyutuyla güncelliğini bugün de koruyor.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/zaman.jpg" height="350">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="Deneme" class="tabcontent">
+        <h3>DENEME  </h3>
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/Denemeler.png" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-10" name="tabs">
+                            <label for="tab-10"><div>Denemeler- Michel de Montaigne  </div><div class="cross"></div></label>
+                            <div class="content">
+                                Michel de Montaigne (1533-1592): "Kendini tanı" ve "Ne biliyorum?" gibi temel sorularla yola çıkarak bir insanda insanlığın bütün hallerini yoklayan "deneme" türünün isim babasıdır.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-11" name="tabs">
+                            <label for="tab-11"><div>Beş Şehir - Ahmet Hamdi Tanpınar </div><div class="cross"></div></label>
+                            <div class="content">
+                                "Beş Şehir'in asıl konusu hayatımızda kaybolan şeylerin ardından duyulan üzüntü ile yeniye karşı beslenen iştiyaktır.
+                                İlk bakışta birbiriyle çatışır gibi görünen bu iki duyguyu sevgi kelimesinde birleştirebiliriz.
+                                Bu sevginin kendisine çerçeve olarak seçtiği şehirler, benim hayatımın tesadüfleridir. Bu itibarla onların arkasında kendi insanımızı ve hayatımızı,
+                                vatanın manevî çehresi olan kültürümüzü görmek daha da doğru olur."
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/Bes.png" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/Mahkeme.png" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-12" name="tabs">
+                            <label for="tab-12"><div>Mahkemelerde (Belgeler) - Sabahattin Ali </div><div class="cross"></div></label>
+                            <div class="content">
+                                Maarif Vekaleti Müfettişlerinden Reşat Nuri" Yazarlığının yanısıra siyasal kimliği de öne çıkan Sabahattin Ali,
+                                1930'lu ve 1940'lı yıllarda Sol görüşlü olmanın bütün zorluklarını yaşadı.
+                                Filiz Ali'nin babasına ait bir sandıkta bulduğu belgeler, bu zorlukların ve çilelerin birer tutanağı niteliğindedir.
+                                Mahkemelerde Türk edebiyat tarihinde ilk defa Kuyucaklı Yusuf için Reşat Nuri tarafından yazılmış,
+                                sansür konusunda hala geçerli sayılabilecek görüşlerin ifade edildiiği raporu, Sabahattin Ali'nin soyadı konusundaki hassasiyetini,
+                                dönemin ünlü kişileri ile arasında geçen tartışmaları ve özel hayatına ışık tutacak birçok belgeyi içeriyor.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-13" name="tabs">
+                            <label for="tab-13"><div>İki Dirhem Bir Çekirdek - İskender Pala </div><div class="cross"></div></label>
+                            <div class="content">
+                                Anlatımı güzelleştirmek, savunulan fikir ve düşünceyi daha etkili kılmak üzere her dilde kalıplaşmış bazı sözler bulunur.
+                                Atasözleri, dua ve temenni cümlecikleri, sövgü ve ilençler, bilmece ve tekerlemeler... Bu tür kalıplaşmış sözler arasında,
+                                dilin bünyesinde en sık rastlanılanlar ise deyimdir.
+                                Deyimlerimizin ortaya çıkış hikâyelerini bilmenin, dilimizin kültüre yansıyan yüzüne bir renk katacağı kesindir.
+                                Umarız, bu konuda daha geniş araştırma yapacaklar için bu küçük kitap bir başlangıç olur.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/pala.png" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/Uc.png" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-14" name="tabs">
+                            <label for="tab-14"><div>Üç Örnek Öykü ve Bir Önsöz - Miguel de Unamuno </div><div class="cross"></div></label>
+                            <div class="content">
+                                Kimi zaman da kişiler, yazar ve okuyucu karşılıklı konuşur ve tartışırlar. Unamuno roman bilimselliği ile alay eder,
+                                yazınsal yapıtların yazarın belli başlı önsezilerini açıklamak için birer araç olduklarını ileri sürer. Kimi yapıtlarında ölümsüzlük özlemi ağır basar,
+                                kimi zaman Tanrı'ya başkaldırır, kimi zaman da yazgıya boyun eğer. Tüm eserlerinde zengin ve özenli bir dil kullanır; kaba,
+                                çirkin sözcükleri ancak deli dolu kişilerine söyleterek kusursuz bir denge tutturmuştur.
+                                Türkiye İş Bankası Kültür Yayınları olarak Yıldız Ersoy Canpolat'ın eşsiz çevirileriyle Sis,
+                                Tula Teyze ve Abel Sanchez'in ardından Unamuno'nun bütün eserlerini yayınlamaya Üç Örnek Öykü ve Bir Önsöz'le devam ediyoruz.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="Dedektif" class="tabcontent">
+        <h3>Dedektif  </h3>
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/ahmet.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-15" name="tabs">
+                            <label for="tab-15"><div>Aşkımız Eski Bir Roman - Ahmet Ümit </div><div class="cross"></div></label>
+                            <div class="content">
+                                Cinayetleri çözmek için sadece aklından ve deneyimlerinden değil,
+                                yaralı yüreğinden de güç alan Başkomser Nevzat, belki de en çok bu yüzden ayrılıyor benzerlerinden,
+                                belki de en çok bu yüzden seviliyor, okunuyor ve hatırlanıyor. Aşkımız Eski Bir Roman,
+                                onun bu zorlu serüveninde yepyeni bir halka...
+
+                                ... mesleğini doğru yapmak için cesaret yetmez, aynı anda kocaman bir yürek ister. Ama o yürek çelikten yapılmıyor.
+                                Bir süre sonra el bombası gibi gümlüyor. O yüreği zamansız gümletmeyelim Ali. Zalimleri sevindirmenin âlemi yok.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-16" name="tabs">
+                            <label for="tab-16"><div>Acı Kahve - Agatha Christie </div><div class="cross"></div></label>
+                            <div class="content">
+                                Ünlü bir fizikçi olan Sir Claude Avory savunma sanayi alanında çok önemli bir formül üretir.
+                                Ancak aile fertlerinin bu formülü çalacağından şüphe etmektedir. Duruma açıklık getirmesi için ünlü dedektif Hercule Poirot'yu malikânesine davet eder.
+                                Bu arada Sir Avory tüm aile fertlerini de çağırmıştır. Yemek sonrası kütüphanede bir yandan kahvesini yudumlarken bir yandan da onlarla sohbet edecektir.
+                                Çünkü formülün akrabaları tarafından çalındığını anlamıştır. Uşağına gizlice kapıyı kilitlemesini emreder,  misafirlerine de ışıkların kısa bir süreliğine kapatılacağını
+                                ve formülü çalan kişinin kâğıdı sehpanın üzerine koymasını söyler. Ancak ışıklar yandığında misafirler kendilerini hiç de beklemedikleri bir manzaranın içinde bulurlar;
+                                ortada boş bir zarf ve bir ceset vardır. Poirot malikâneye ulaştığında Sir Avory'nin cansız bedeniyle karşılaşır. Şimdi her şey ünlü dedektifin keskin zekâsına,
+                                müthiş dikkatine ve eşsiz gözlemine kalmıştır... "Poirot... tıpkı sade bir kahve gibi canlandırıp ilham veriyor. Acı Kahve, Christie hikâyelerine yapılmış hoş bir katkı."
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/aci.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/ahmet2.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-17" name="tabs">
+                            <label for="tab-17"><div>Agathanın Anahtarı - Ahmet Ümit</div><div class="cross"></div></label>
+                            <div class="content">
+                                Kim başka birinin yerine ölmek ister ki?
+                                Agatha Christie öyküsüyle açılan kitap, gücünü enerji yüklü kısa öykülerden alıyor.
+                                Başkomser Nevzat’ı daha çok sahada gördüğümüz, iyi bir polisiyeye has tüm incelikleri ve yüksek heyecanı
+                                bir arada barındıran Agatha’nın Anahtarı, belki de Ahmet Ümit’in en enerjik, deli dolu eseri.
+
+                                Hiçbir şey söylemedi Talat, sadece kederli gözlerle baktı yüzüme. Şimdi eli kanlı bir katil değil,
+                                yüreği acıyla dolu bir baba duruyordu karşımda...
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <div id="Şiir" class="tabcontent">
+        <h3>Şiir  </h3>
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/gok.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-18" name="tabs">
+                            <label for="tab-18"><div>Göğe Bakma Durağı - Turgut Uyar </div><div class="cross"></div></label>
+                            <div class="content">
+                                İkimiz birden sevinebiliriz göğe bakalım
+
+                                Şu kaçamak ışıklardan şu şeker kamışlarından Bebe dişlerinden güneşlerden yaban otlarından
+
+                                Durmadan harcadığım şu gözlerimi al kurtarŞu aranıp duran korkak ellerimi tut
+
+                                Bu evleri atla bu evleri de bunları da
+
+                                Göğe bakalım
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-19" name="tabs">
+                            <label for="tab-19"><div>Bütün Şiirleri - Sabahattin Ali</div><div class="cross"></div></label>
+                            <div class="content">
+
+                                "Aşkını candan duymuşum
+                                Canım yoluna koymuşum
+                                Tam dokuz yaşındaymışım
+                                Dünyaya geldiğin zaman.
+
+                                Kimbilir nasıl güzeldin,
+                                Göklerden yere süzüldün
+                                Benim alnıma yazıldın
+                                Dünyaya geldiğin zaman."
+
+                                Dağlar ve Rüzgar, Kurbağanın Serenadı ve öteki şiirler...
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/ali.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/veli.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+
+                        <h1>Deneme</h1>
+
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-20" name="tabs">
+                            <label for="tab-20"><div> Bütün Şiirleri - Orhan Veli  </div><div class="cross"></div></label>
+                            <div class="content">
+                                Orhan Veli: Türk şiirinin "zincirkıran"ı, "kasketgiydiren"i, "sivilleştiren"i, "açıkhavaozanı" ...
+
+                                "Orhan Veli çok daha ileriye bir adım attı: Şiirin kendi öz bir dili, bir vezni olmadığı gibi kendine
+                                öz konuları da olmayacağını gösterdi, ahengin, musikinin de şiirden kaldırılabileceğini anlattı."
+                                -Nurullah Ataç
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-21" name="tabs">
+                            <label for="tab-21"><div>Dörtlükler - Hasan Ali Yücel Klasikleri - Ömer Hayyam</div><div class="cross"></div></label>
+                            <div class="content">
+                                Ömer Hayyam: doğum ve ölüm tarihleri çeşitli kaynaklara göre farklılık gösterse de,
+                                II. yüzyılın ortalarında doğduğu, 12. yüzyılın ilk çeyreği civarında öldüğü kabul edilen İranlı şair,
+                                felsefeci ve bilim adamı. Günümüzde ise, daha çok "rubai" türünün yaratıcısı olarak kabul gören Hayyam'ın dörtlükleri,
+                                Türkçe'ye Yahya Kemal ve Abdülbaki Gölpınarlı başta olmak üzere pek çok kez çevrildi. Sabahattin Eyüboğlu'nun çevirisi de, bunlar arasında en sevilenlerinden biri.
+
+                                Sabahattin Eyüboğlu (1908-1973), Hasan Âli Yücel'in kurduğu Tercüme Bürosu'nun başkan yardımcısı ve Cumhuriyet döneminin en önemli kültür insanlarından biriydi.
+                                Tek başına ya da "imece" birlikteliğiyle yaptığı çeviriler, Hayyam'dan Montaigne'e, Platon'dan Shekespeare'e hep, dünya kültürünün doruk adlarındandı.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/hayyam.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="Polisiye" class="tabcontent">
+        <h3>Polisiye  </h3>
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/avni.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-22" name="tabs">
+                            <label for="tab-22"><div>Kamelya'nın Ölümü- Ebu's Süreyya Sami </div><div class="cross"></div></label>
+
+                            <div class="content">
+                                Geçen devirde, sırf aklının dâhice çalışmasına güvenerek bu mesleğe giren “Avni” daha yirmi beş yaşında iken arkadaşlarının dikkatini ve hayretini çekmeye başlamış,
+                                az zamanda Zaptiye Nezareti yöneticilerinin de takdirini kazanarak en önemli olayların, en gizemli cinayetlerin araştırılması ve takibi kendisine verilmişti.
+                                Emniyet hizmetlerine girişinin beşinci senesinde “Amanvermez” lakabıyla anılmaya başlanmış ve bu lakap memleketin en sefil tabakasına kadar yayılmış, yarası bulunan sefiller
+                                bundan pek gocunmakta kendilerini haklı görmüşlerdi. Avni ilk senelerde hırsızlar, yankesiciler, adi kabadayılar için bir afet, bir musibet kesilmişti.
+                                “Avni” çok çalıştı, o kadar çok çalıştı ki nihayet vücudu bu güç yetmez çalışmaya dayanamayarak kırk iki yaşında yıprandı.
+                                Saçında, sakalında bir tane siyah kıl kalmamış halde ahirete göç etti. Ölüm anında yanındaki ahbaplarına:
+                                - Rahat döşeğimde can vermekte olduğuma kendim de şaşıyorum! demişti.
+                                İşte serimizin kahramanı böyle bir “Avni” idi.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-23" name="tabs">
+                            <label for="tab-23"><div>Cerrah - Johana Gustawsson  </div><div class="cross"></div></label>
+                            <div class="content">
+                                Tespit edilen iki cinayet bir seri katilin işi midir? Geçmişte Buchenwald’de yaşanmış şaşırtıcı olaylarla bu cinayetlerin arasında
+                                nasıl bir bağlantı vardır? Kanada Kraliyet Atlı Polisi’nden yapılan atamayla İngiltere’deki Scotland Yard’da çalışmaya başlayan
+                                Kriminoloji Profil Uzmanı Emily Roy, Linnéa’nın yakın arkadaşı ve kurgu dışı cinayet yazarı Alexis Castells ile birlikte olayı
+                                soruşturan ekibe katılır. İsveç’le Londra arasında mekik dokuyan bu iki kadın, önlerindeki gizemli bulmacayı çözebilmek için geçmişe,
+                                1944 yılında yaşanmış ürkütücü olaylara dönmek zorundadır. Doğasında kötülük bulunan birinin ne korkunç şeyler yapabildiğini
+                                ortaya koyan bu romanı okurken tüyleriniz ürperecek!
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/cerrah.jpg" height="350">
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-4 " align="center">
+                    <img src="/img/klise.jpg" height="350">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-24" name="tabs">
+                            <label for="tab-24"><div>Kristal Kilise - Asa Larsson </div><div class="cross"></div></label>
+                            <div class="content">
+                                Rebecka, güvenmekte kararsız olduğu Sanna’ya ve küçük çocuklarına göz kulak olmaya çalışacak, bir zamanlar âşık olduğu adamın katilinin peşine düşecek ve
+                                geçmişte terk etmek zorunda kaldığı şehrin karanlık, soğuk ve ölüm kokan atmosferinin içine yeniden dalacaktır.
+                                İnsan psikolojisinin dönüşümüne dair akıllarda yer edecek, zekice kurgulanmış bir roman.
+                            </div>
+                        </div>
+                        <div align="center" style="">
+                            <button type="submit" style="width:100px; height:50px ; " class="btn btn-primary "><a target="_blank" style="color:white; text-decoration: none" href="file:///C:/Users/yakup/Desktop/%C4%B0nternet%20Prog/KitapAl.html">Kitap Al  </a></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Roman mt-6">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="wrapper">
+                        <div class="wrap-1">
+                            <input type="radio" id="tab-25" name="tabs">
+                            <label for="tab-25"><div>Kanla Yaşıyoruz - Glen Duncan   </div><div class="cross"></div></label>
+                            <div class="content">
+
+                                Yirmi bin yaşındaki, bilinen en eski vampir Remshi, rüyalarına musallat olan Talulla’yı aramaktadır. 
+                                Fakat kurtadam ve vampirleri yeryüzünden silmeye 
+                                ant içmiş Hıristiyan tarikat Militi Christi de Talulla’nın peşindedir.
+                                Yolları tuhaf bir şekilde kesişen Remshi ve Talulla, ailelerini korumak ve türlerini felaketten
+                                kurtarmak için imkânsız bir aşk ve kadim bir kehanet içerisinde güçlerini birleştirmek zorundadırlar.
+                                “Duncan, Gotik edebiyatın genelde eksikliğini çektiği 
+                                iki konuda çok başarılı:
+                                zarif bir anlatım ve incelikli 
+                                bir edebi hassasiyet.”
+                                —Richmond Times-Dispatch
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 " align="center">
+                    <img src="/img/kan.jpg" / height="350">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
+
+    </script>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+

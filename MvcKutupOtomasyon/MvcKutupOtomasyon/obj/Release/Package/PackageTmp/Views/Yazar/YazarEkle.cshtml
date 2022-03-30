@@ -1,0 +1,52 @@
+﻿@model MvcKutupOtomasyon.Models.Model.Yazar
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+
+<head>
+    <link href="/Content/stil.css" rel="stylesheet" id="bootstrap-css" />
+</head>
+
+@using (Html.BeginForm("YazarEkle", "Yazar", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <form class="row g-3 needs-validation" novalidate onsubmit="return confirm('Kategoriyi Eklemek istiyor Musunuz?');">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="~/images/author.png"  alt=""  />
+                    <h3>Yazar Ekle</h3>
+                    <p>Eklemek istediğiniz yazar adını girerek bu sayfadan kategori ekleyebilirsiniz!</p>
+                </div>
+                <div class="col-md-9 register-right">
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Eklenecek Yazar Adı</h3>
+                            <div class="row register-form">
+                                <div class="form-group">
+                                    <label>@Html.DisplayNameFor(model => model.AD)</label>
+                                    @Html.EditorFor(y => y.AD, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.AD, "", new { @style = "color:red" })
+                                    <div style="margin-top:15px">
+                                        <button class="btn btn-dark" id="Btn1" style="margin-left:33%">Yazar ekle</button>
+                                    </div>
+                                    <br />
+                                    <a href="/Yazar/YazarList/" class="btn btn-dark" style="margin-left:33%">Yazar Sil</a>
+                                    <br />
+                                    <br />
+                                    <a href="/Kitap/KitapEkle/" class="btn btn-dark" style="margin-left:33%">Geri dön</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+}

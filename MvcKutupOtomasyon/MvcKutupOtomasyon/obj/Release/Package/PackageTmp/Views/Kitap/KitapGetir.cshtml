@@ -1,0 +1,100 @@
+﻿
+@model MvcKutupOtomasyon.Models.Model.Kitap
+
+@{
+    ViewBag.Title = "KitapGetir";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+
+<head>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/Content/Index.css" rel="stylesheet" />
+    <title>Kitap Bilgisi</title>
+</head>
+
+<div class="form-group">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div id="c" class="card card-outline-secondary">
+                    <div class="card-header">
+                        <h3 class="mb-0">KİTAP BİLGİSİ</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="form" role="form" autocomplete="off">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.AD)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.AD, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.Kategori.AD)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.Kategori.AD, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.Yazar.AD)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.Yazar.AD, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.BASIMYILI)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.BASIMYILI, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.YAYINEVİ)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.YAYINEVİ, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.SAYFA)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.SAYFA, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.ISBN)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.ISBN, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">@Html.DisplayNameFor(model => model.OZET)</label>
+                                <br />
+                                <br />
+                                <div class="col-lg-9">
+                                    @Html.DisplayFor(k => k.OZET, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div>
+                                @Html.ActionLink("Kitabı Al", "OduncAl", "Hareket", new { KitapID = Model.KitapID }, new { @class = "btn btn-dark" })
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

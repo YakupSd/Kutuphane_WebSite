@@ -1,0 +1,57 @@
+﻿@using MvcKutupOtomasyon.Models.Model
+@model IEnumerable<MvcKutupOtomasyon.Models.Model.Hareket>
+@{
+    ViewBag.Title = "Odunclistele";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+<br />
+<br />
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Uyeler.AD)</th>
+            <th>@Html.DisplayNameFor(model => model.Kitap.AD)</th>
+            <th>@Html.DisplayNameFor(model => model.ALISTARİH)</th>
+            <th>@Html.DisplayNameFor(model => model.İADETARİH) </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Model.ToArray()[i].Uyeler.AD
+                </td>
+                <td>
+                    @Model.ToArray()[i].Kitap.AD
+                </td>
+                <td>
+                    @Model.ToArray()[i].ALISTARİH
+                </td>
+                <td>
+                    @Model.ToArray()[i].İADETARİH
+                    @if (ViewBag.uyarilar[i] != null)
+                    {
+                    <p style="color:red">@ViewBag.uyarilar[i]</p>
+                    }
+                </td>
+                <td><a href="/Hareket/OduncSil/@Model.ToArray()[i].HareketID" class="btn btn-dark">İade et</a></td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "order": [[3, "desc"]]
+        });
+    });
+</script>
+
+
+

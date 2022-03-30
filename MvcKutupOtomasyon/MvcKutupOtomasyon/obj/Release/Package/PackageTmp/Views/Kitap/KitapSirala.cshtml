@@ -1,0 +1,69 @@
+﻿@using MvcKutupOtomasyon.Models.Model
+@model IEnumerable<MvcKutupOtomasyon.Models.Model.Kitap>
+
+@{
+    ViewBag.Title = "KitapSirala";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+<br />
+<br />
+<p style="color:red">@ViewBag.mesaj</p>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.AD)</th>
+            <th>@Html.DisplayNameFor(model => model.Yazar.AD)</th>
+            <th>@Html.DisplayNameFor(model => model.Kategori.AD)</th>
+            <th>@Html.DisplayNameFor(model => model.BASIMYILI) </th>
+            <th>@Html.DisplayNameFor(model => model.YAYINEVİ)</th>
+            <th>@Html.DisplayNameFor(model => model.SAYFA)</th>
+            <th>@Html.DisplayNameFor(model => model.ISBN)</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.AD
+                </td>
+                <td>
+                    @item.Yazar.AD
+                </td>
+                <td>
+                    @item.Kategori.AD
+                </td>
+                <td>
+                    @item.BASIMYILI
+                </td>
+                <td>
+                    @item.YAYINEVİ
+                </td>
+                <td>
+                    @item.SAYFA
+                </td>
+                <td>
+                    @item.ISBN
+                </td>
+                <td>
+                    <a href="/Kitap/KitapGetir/@item.KitapID" class="btn btn-dark">Kitap al</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "order": [[3, "desc"]]
+        });
+    });
+</script>
+
+<br />
+<a href="/Kitap/KitapEkle" class="btn btn-warning" style="margin-left:40%">Kitap Ekle</a>
+<br />
+<br />
+

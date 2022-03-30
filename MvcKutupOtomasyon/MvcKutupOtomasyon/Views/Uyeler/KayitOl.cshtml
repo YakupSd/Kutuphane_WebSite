@@ -1,0 +1,193 @@
+﻿@model MvcKutupOtomasyon.Models.Model.Uyeler
+@{
+    Layout = "";
+}
+<html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url(/images/resim2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .container {
+            font-family: Arial;
+            background-color: black;
+            margin: 0 auto;
+            text-align: center;
+            opacity: 0.8;
+            margin-top: 50px;
+            box-shadow: 2px 5px 5px 0px #eee;
+            max-width: 550px;
+            padding-top: 10px;
+            height: 450px;
+            margin-top: 150px;
+        }
+
+        .lastname {
+            margin-left: 1px;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .firstname {
+            margin-left: 1px;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: white;
+            margin-top: 5px;
+        }
+
+        #lname {
+            margin-top: 5px;
+        }
+
+
+
+        .heading {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            padding-top: 10px;
+        }
+
+        #email {
+            margin-top: 5px;
+        }
+
+        .mail {
+            margin-left: 44px;
+            font-family: sans-serif;
+            color: white;
+            font-size: 14px;
+            margin-top: 13px;
+        }
+
+        .pass {
+            color: white;
+            margin-top: 9px;
+            font-size: 14px;
+            font-family: sans-serif;
+            margin-left: 6px;
+            margin-top: 9px;
+        }
+
+        #password {
+            margin-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    @using (Html.BeginForm("KayitOl", "Uyeler", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="container">
+            <header class="heading"> KAYIT FORMU<hr /></header>
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="firstname">@Html.DisplayNameFor(model => model.AD)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.AD, "", new { @style = "color:red" })
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="lastname">@Html.DisplayNameFor(model => model.SOYAD)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.SOYAD, "", new { @style = "color:red" })
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                       <label class="mail">@Html.DisplayNameFor(model => model.MAİL)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(m => m.MAİL, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.MAİL, "", new { @style = "color:red" })
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="lastname">@Html.DisplayNameFor(model => model.TELEFON)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.TELEFON, "", new { @style = "color:red" })
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="lastname">@Html.DisplayNameFor(model => model.KULLANICIADI)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.TextBoxFor(m => m.KULLANICIADI, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.KULLANICIADI, "", new { @style = "color:red" })
+                            <br />
+                            <p style="color:red">@ViewBag.Mesaj</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="pass">@Html.DisplayNameFor(model => model.SİFRE)</label>
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.PasswordFor(m => m.SİFRE, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.SİFRE, "", new { @style = "color:red" })
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="panel-body">
+                            <button type="submit" style="width:20%; margin-left:115px; margin-top:10px; color:black;" btn-primary btn-block"><b>Kayıt ol</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</body>
+</html>
+
+

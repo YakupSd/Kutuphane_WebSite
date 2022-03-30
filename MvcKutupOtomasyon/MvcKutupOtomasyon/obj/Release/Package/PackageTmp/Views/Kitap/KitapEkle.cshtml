@@ -1,0 +1,93 @@
+﻿@model MvcKutupOtomasyon.Models.Model.Kitap
+
+
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+
+<head>
+    <link href="/Content/stil.css" rel="stylesheet" id="bootstrap-css" />
+</head>
+
+@using (Html.BeginForm("KitapEkle", "Kitap", FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <form class="row g-3 needs-validation" novalidate onsubmit="return confirm('Kitabı Almak istiyor Musunuz?');">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="/images/logo_white.png" />
+                    <h3>Kitap Al</h3>
+                    <p>Bilgilerinizi girerek bu sayfadan kitabınızı alabilirsiniz!</p>
+                </div>
+                <div class="col-md-9 register-right">
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Alınacak Kitap Bilgileri</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.AD)</label>
+                                        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.AD, "", new { @style = "color:red" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.Kategori.AD)</label>
+                                        @Html.DropDownListFor(k => k.Kategori.KategoriID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", Name = "KategoriID", id = "KategoriID" })
+                                    </div><br />
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.Yazar.AD)</label>
+                                        @Html.DropDownListFor(k => k.Yazar.YazarID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control", Name = "YazarID", id = "YazarID" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.BASIMYILI)</label>
+                                        @Html.TextBoxFor(y => y.BASIMYILI, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.BASIMYILI, "", new { @style = "color:red" })
+                                    </div>
+                                    <div style="margin-top:15px">
+                                        <button type="submit" class="btn btn-info">Kitap ekle</button>
+                                    </div>
+                                    <br />
+                                    <a href="/Kategori/KategoriEkle/" class="btn btn-dark"> Kategori ekle</a>
+                                    <br />
+                                    <br />
+                                    <a href="/Yazar/YazarEkle/" class="btn btn-dark"> Yazar ekle</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.ISBN)</label>
+                                        @Html.TextBoxFor(y => y.ISBN, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.ISBN, "", new { @style = "color:red" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.YAYINEVİ)</label>
+                                        @Html.TextBoxFor(y => y.YAYINEVİ, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.YAYINEVİ, "", new { @style = "color:red" })
+                                    </div><br />
+
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.SAYFA)</label>
+                                        @Html.TextBoxFor(y => y.SAYFA, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.SAYFA, "", new { @style = "color:red" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label>@Html.DisplayNameFor(model => model.OZET)</label>
+                                        @Html.TextAreaFor(y => y.OZET, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.OZET, "", new { @style = "color:red" })
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+}

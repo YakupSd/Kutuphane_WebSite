@@ -1,0 +1,155 @@
+﻿@model MvcKutupOtomasyon.Models.Model.Uyeler
+@{
+    Layout = "";
+}
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .main-head {
+            height: 150px;
+            background: #FFF;
+        }
+
+        .sidenav {
+            height: 100%;
+            background-color: #000;
+            overflow-x: hidden;
+            padding-top: 20px;
+            background-image: url('/images/bg.jpg');
+            background-size: cover;
+        }
+
+
+        .main {
+            padding: 0px 10px;
+        }
+
+        @@media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+
+        @@media screen and (max-width: 450px) {
+            .login-form {
+                margin-top: 10%;
+            }
+
+            .register-form {
+                margin-top: 10%;
+            }
+        }
+
+        @@media screen and (min-width: 768px) {
+            .main {
+                margin-left: 40%;
+            }
+
+            .sidenav {
+                width: 40%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            .login-form {
+                margin-top: 50%;
+                margin-left: 40px;
+            }
+
+            .register-form {
+                margin-top: 20%;
+            }
+        }
+
+
+        .login-main-text {
+            margin-top: 30%;
+            margin-left: 30px;
+            color: #fff;
+        }
+
+            .login-main-text h2 {
+                font-weight: 300;
+            }
+
+        .btn-black {
+            background-color: #000 !important;
+            color: #fff;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidenav">
+            <div class="login-main-text">
+                <h2>OTURUM <br />AÇ</h2>
+                <p>Kütüphane Otomasyon Sistemine Erişmek İçin<br /> Buradan Giriş Yapın Veya <br />Kayıt Olun.</p>
+            </div>
+
+        </div>
+
+        @using (Html.BeginForm("GirisYap", "Uyeler", FormMethod.Post))
+        {
+            <div class="main">
+                <div class="col-md-6 col-sm-12">
+                    <div class="login-form">
+                        <div class="form-group">
+                            <label>@Html.DisplayNameFor(model => model.KULLANICIADI)</label>
+                            @Html.TextBoxFor(m => m.KULLANICIADI, new { @class = "form-control", placeholder = "Kullanıcı adı", name = "KULLANICIADI" })
+                            @User.Identity.Name
+                        </div>
+                        <div class="form-group">
+                            <label>@Html.DisplayNameFor(model => model.SİFRE)</label>
+                            @Html.PasswordFor(m => m.SİFRE, new { @class = "form-control", placeholder = "Şifre", name = "SİFRE" })
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-outline-dark">Oturum Aç</button>
+                            <a class="btn btn-outline-dark" href="@Url.Action("Sifre","Uyeler")">Şifremi unuttum</a>
+                        </div>
+                        <p style="color:red"> @ViewBag.Mesaj</p>
+                    </div>
+                </div>
+                <div style="margin-left:20%">
+                    <p>Hesabın yok mu?</p>
+                    <a class="btn btn-outline-dark" href="@Url.Action("KayitOl","Uyeler")">Kayıt Ol</a>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="margin-left:40%">
+                    <a class="btn btn-outline-dark" href="@Url.Action("Vitrin","Vitrin")">Siteye dön</a>
+                </div>
+            </div>
+
+        }
+
+    </div>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-3.6.0.min.js"></script>
+</body>
+</html>

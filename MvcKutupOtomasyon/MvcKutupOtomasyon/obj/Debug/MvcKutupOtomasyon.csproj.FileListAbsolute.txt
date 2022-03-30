@@ -1,0 +1,197 @@
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll.config
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.pdb
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe.config
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.rsp
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe.config
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.rsp
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Buffers.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Memory.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe.config
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.rsp
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\WebGrease.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.pdb
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.CoreCompileInputs.cache
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.CopyComplete
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.pdb
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.dll
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.xml
+C:\Users\Elif\source\repos\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csprojAssemblyReference.cache
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll.config
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.pdb
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe.config
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.rsp
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe.config
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.rsp
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Buffers.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Memory.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe.config
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.rsp
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\WebGrease.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.xml
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.pdb
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csprojAssemblyReference.cache
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.CoreCompileInputs.cache
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.CopyComplete
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.dll
+C:\Users\yakup\Downloads\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.pdb
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll.config
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\MvcKutupOtomasyon.pdb
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.exe.config
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csc.rsp
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.exe.config
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\csi.rsp
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Buffers.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Collections.Immutable.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Memory.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Numerics.Vectors.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Reflection.Metadata.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.exe.config
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\vbc.rsp
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\roslyn\VBCSCompiler.exe.config
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.Web.Infrastructure.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\WebGrease.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\EntityFramework.SqlServer.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\FluentValidation.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Newtonsoft.Json.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Helpers.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Mvc.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Optimization.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.Razor.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Deployment.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\System.Web.WebPages.Razor.xml
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\bin\Antlr3.Runtime.pdb
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.AssemblyReference.cache
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.csproj.CoreCompileInputs.cache
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.dll
+D:\Yedek\Dpü 2.sınıf 1.Dönem\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\MvcKutupOtomasyon\obj\Debug\MvcKutupOtomasyon.pdb

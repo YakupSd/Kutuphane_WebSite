@@ -1,0 +1,43 @@
+﻿@using MvcKutupOtomasyon.Models.Model
+@model MvcKutupOtomasyon.Models.Model.Hareket
+@{
+    ViewBag.Title = "OduncAl";
+    Layout = "~/Views/Shared/giris_Layout.cshtml";
+}
+
+@using (Html.BeginForm("OduncAl", "Hareket", FormMethod.Post))
+{
+    <form class="form-group">
+        <div style="margin-bottom:15px"></div>
+        <div class="form-group">
+            @Html.HiddenFor(model => model.KitapID)
+            @Html.HiddenFor(model => model.UyeID)
+            @Html.HiddenFor(model => model.HareketID)
+            @Html.HiddenFor(model => model.ALISTARİH)
+            @Html.HiddenFor(model => model.İADETARİH)
+            <br />
+            <div>
+                <p style="font-weight:bold">@Html.DisplayNameFor(model => model.Kitap.AD)</p>
+                <input name="KitapID" value="@ViewBag.Kitap.AD" disabled />
+            </div>
+            <br />
+            <div>
+                <p style="font-weight:bold">@Html.DisplayNameFor(model => model.Uyeler.KULLANICIADI)</p>
+                <input name="UyeID" value=" @Html.DisplayName(User.Identity.Name)" disabled />
+            </div>
+            <br />
+            <div>
+                <p style="font-weight:bold">@Html.DisplayNameFor(model => model.ALISTARİH)</p>
+                <input name="ALISTARİH" value="@DateTime.Now.ToShortDateString()" id="ALISTARİH" disabled />
+            </div>
+            <br />
+            <div>
+                <p style="font-weight:bold">@Html.DisplayNameFor(model => model.İADETARİH)</p>
+                <input name="İADETARİH" value="@DateTime.Now.AddDays(7).ToShortDateString()" id="İADETARİH" disabled />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-dark">Ödünç al</button>
+            <p style="color:red" > @ViewBag.Mesaj</p>
+        </div>
+    </form>
+}
